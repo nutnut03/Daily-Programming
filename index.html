@@ -11,17 +11,22 @@
 
 <body>
 
+  <p id="demo"></p>
 
-    <p id="demo"></p>
-
-    <script>
-    function myFunction(p1, p2, p3) {
-      return p1 - p2 * p3;
+  <script>
+  // Create an object:
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566,
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
     }
-    
-    let result = myFunction(10, 10, 10);
-    document.getElementById("demo").innerHTML = result;
-    </script>
+  };
+  
+  // Display data from the object:
+  document.getElementById("demo").innerHTML = person.fullName();
+  </script>
 
 </body>
 
